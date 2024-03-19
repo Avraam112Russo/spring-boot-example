@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+        lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bye</title>
+</head>
+<body>
+<h1>
+   Some error occurred...
+</h1><br>
+<div>Caused: </div>
+<div th:if="${errors}">
+    <span th:each="error : ${errors}"
+    th:text="${error.defaultMessage}"
+    >error message</span><br>
+</div>
+</body>
+</html>

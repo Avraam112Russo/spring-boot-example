@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deps</title>
+</head>
+<body>
+<!--<div th:text="${deps}">Dummy text</div>-->
+<!--<table>-->
+<!--    <tr data-th-each="dep : ${deps}">-->
+<!--        <td data-th-text="${dep.departmentName}">dummy</td>-->
+<!--        <td data-th-text="${dep.id}">dummy</td>-->
+<!--    </tr>-->
+<!--</table>-->
+<!--</div>-->
+
+<div th:each="dep : ${deps}">
+    <a th:href="@{'/api/v5/department/setNewName/' + ${dep.id}}" th:text="${dep.departmentName}">Dummy</a>
+</div>
+
+
+</body>
+</html>

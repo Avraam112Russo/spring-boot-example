@@ -1,0 +1,1 @@
+alter table t_departments rename column modified_by TO updated_by;

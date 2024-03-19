@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deps</title>
+</head>
+<body>
+<h2>Enter information for update: </h2>
+<form th:action="@{'/api/v5/department/update/' + ${department.id}}" method="post">
+    <label for="depNewName">New name:
+    <input id="depNewName" type="text" name="name">
+    </label><br>
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

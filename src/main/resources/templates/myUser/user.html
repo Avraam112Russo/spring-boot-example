@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deps</title>
+</head>
+<body>
+
+<h2>Info about user: </h2>
+<div>Username:
+<span th:text="${user.username}">dummy</span>
+</div>
+
+<div>Email:
+    <span th:text="${user.email}">dummy</span>
+</div>
+
+<div>BirthDate:
+    <span th:text="${user.birthDate}">dummy</span>
+</div>
+
+<div>User ID:
+    <span th:text="${user.id}">dummy</span>
+</div>
+<br>
+<!--<div>-->
+<!--    <img th:src="@{'http://localhost:8090/api/v7/user/avatar/' + ${user.id}}" alt="Avatar">-->
+<!--</div>-->
+</body>
+</html>

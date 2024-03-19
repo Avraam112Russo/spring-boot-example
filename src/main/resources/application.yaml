@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/postgres
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+  mvc:
+    view:
+      prefix: /templates/
+      suffix: .html
+    format:
+      date: iso
+      ##convert for @Controller
+
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        hbm2ddl:
+          auto: update
+    open-in-view: false
+    ##enabled open transaction in controller layer
+
+  liquibase:
+    change-log: classpath:db.changelog/db.changelog-master.yaml
+server:
+  port: 8090
+
+logging:
+  level:
+    root: info
